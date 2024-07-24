@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Basic settings (name space)-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--create bean of the class Dog-->
+    <!--id="how we will write that call the bean of the  class "-->
+    <!--class="full name of class"-->
+    <bean id="myDog" class="spring._1inversionControlAndDependencyInjection._1inversionContol._1introduction.Dog">
+    </bean>
+
+    <!--create bean of the class Cat-->
+    <!--id="how we will write that call the bean of the  class "-->
+    <!--class="full name of class"-->
+    <bean id="myCat" class="spring._1inversionControlAndDependencyInjection._1inversionContol._1introduction.Cat">
+    </bean>
+</beans>

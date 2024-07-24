@@ -1,4 +1,4 @@
-package revers.mydomain.springstart2;
+package spring._1inversionControlAndDependencyInjection._1introduction;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
