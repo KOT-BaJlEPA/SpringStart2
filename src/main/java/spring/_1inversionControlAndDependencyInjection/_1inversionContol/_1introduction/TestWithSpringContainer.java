@@ -5,7 +5,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class TestWithSpringContainer {
     public static void main(String[] args) {
         // create Spring Container - Application context
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("_1/_1/_1/appContext.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("_1inversionControlAndDependencyInjection/appContext.xml");
 
         //get object from ApplicationContext
         Dog dog = (Dog) context.getBean("myDog");

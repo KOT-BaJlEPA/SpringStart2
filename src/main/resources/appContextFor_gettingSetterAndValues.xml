@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="myPet" class="spring._1inversionControlAndDependencyInjection._2DependencyInjection._1createDependencyInjection._2createDependencyInjectionUseGetterSetter._1getterSetterAndValues.Cat">
+        <property name="name" value="Valera"></property>
+    </bean>
+    <bean id="myPerson" class="spring._1inversionControlAndDependencyInjection._2DependencyInjection._1createDependencyInjection._2createDependencyInjectionUseGetterSetter._1getterSetterAndValues.Person">
+        <property name="name" value="Jonah"></property>
+        <property name="pet" ref="myPet"></property>
+        <!--integer write in quotes-->
+        <property name="age" value="36"></property>
+    </bean>
+</beans>

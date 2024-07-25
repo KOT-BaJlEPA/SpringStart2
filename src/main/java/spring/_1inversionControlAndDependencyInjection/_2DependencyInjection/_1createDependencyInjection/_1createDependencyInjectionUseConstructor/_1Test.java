@@ -6,7 +6,7 @@ public class _1Test {
     public static void main(String[] args) {
         //Create Spring Container(Application context)
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
-                "_1/_2/_1/_1/AppContextFor_1useConstructor.xml");
+                "_1inversionControlAndDependencyInjection/AppContextFor_1useConstructor.xml");
         //get Object from context
         House house = context.getBean("house", House.class);
         System.out.println(house);
