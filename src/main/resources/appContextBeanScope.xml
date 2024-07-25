@@ -7,9 +7,19 @@
         <bean id="myBathRoom" class="spring._2BeanScope._1singletone.BathRoom">
             <property name="area" value="${bathroom.area}"></property>
         </bean>
-        <bean id="myFlat" class="spring._2BeanScope._1singletone.Flat">
+    <!--scope="singleton" by default-->
+        <bean id="myFlat" class="spring._2BeanScope._1singletone.Flat" scope="singleton">
             <property name="numberOfFlat" value="${flat.numberOfFlat}"></property>
             <property name="bathRoom" ref="myBathRoom"></property>
+        </bean>
 
+
+        <bean id="myBathRoomPrototype" class="spring._2BeanScope._2prototype.BathRoomPrototype">
+            <property name="area" value="${bathroom.area}"></property>
+        </bean>
+    <!--scope="prototype" provide create new bean when we run geaBean() every time-->
+        <bean id="myFlat2" class="spring._2BeanScope._2prototype.Flat2" scope="prototype">
+            <property name="numberOfFlat" value="${flat.numberOfFlat}"></property>
+            <property name="bathRoom" ref="myBathRoomPrototype"></property>
         </bean>
 </beans>

@@ -1,14 +1,14 @@
-package spring._2BeanScope._1singletone;
+package spring._2BeanScope._2prototype;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class Test2 {
+public class Test1 {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("appContextBeanScope.xml");
-        System.out.println(" the object Flat and BathRoom is created regardless of we call context.getBean() or not");
+        System.out.println(" the object Flat and BathRoom will not be called until we cal the method getBean()");
 
-        Flat flat1 = (Flat) context.getBean("myFlat", Flat.class);
-        Flat flat2 = (Flat) context.getBean("myFlat", Flat.class);
+        Flat2 flat1 = (Flat2) context.getBean("myFlat2", Flat2.class);
+        Flat2 flat2 = (Flat2) context.getBean("myFlat2", Flat2.class);
 
         System.out.println();
         System.out.println( "   flat1   " + flat1);
@@ -21,11 +21,11 @@ public class Test2 {
         System.out.println();
         System.out.println( "   flat1   " + flat1);
         System.out.println( "       flat2   " + flat2);
-        System.out.println(" it means that context return only one object");
+        System.out.println(" it means that context return new object every time when we called the method getBean()");
 
         System.out.println();
-        System.out.println(context.getBean("myFlat", Flat.class) == context.getBean("myFlat", Flat.class));
-        //true
+        System.out.println(context.getBean("myFlat2", Flat2.class) == context.getBean("myFlat2", Flat2.class));
+        //false
         context.close();
 
 
