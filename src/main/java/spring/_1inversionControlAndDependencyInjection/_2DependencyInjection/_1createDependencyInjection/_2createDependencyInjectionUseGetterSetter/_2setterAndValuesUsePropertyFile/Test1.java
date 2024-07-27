@@ -4,7 +4,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Test1 {
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("appContextFor_setterAndValuesUseFileProperties.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("_1inversionControlAndDependencyInjection/appContextFor_setterAndValuesUseFileProperties.xml");
         Color c = (Color) context.getBean("myColor");
         System.out.println(c);
         context.close();

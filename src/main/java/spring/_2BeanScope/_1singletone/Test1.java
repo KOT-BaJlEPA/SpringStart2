@@ -4,7 +4,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Test1 {
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("appContextBeanScope.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("_2BeanScope/appContextBeanScope.xml");
         System.out.println(" the object Flat and BathRoom is created regardless of we call context.getBean() or not");
     }
 }
